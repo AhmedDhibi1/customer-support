@@ -1,0 +1,65 @@
+###create a user
+POST http://localhost:5000/customer-support/users/register 
+Content-Type: application/json
+
+{
+  "firstName": "webmasetr",
+  "lastName": "",
+  "email": "webmaster@example.com",
+  "password": "password123",
+  "homeAddress": "123 Main St"
+}
+###authenticate a user
+POST http://localhost:5000/customer-support/users/authenticate
+Content-Type: application/json
+
+{
+  "email": "johne@example.com",
+  "password": "password123"
+}
+###get all users
+GET http://localhost:5000/customer-support/users/getAll
+Content-Type: application/json
+
+{
+"email": "webmaster@example.com",
+"password": "password123"
+}
+###get current
+GET http://localhost:5000/customer-support/users/3
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTcxMTA0MjI3NywiZXhwIjoxNzExOTA2Mjc3fQ.qsjehVrV96C4onffu1CXJGEP4OGXSLufFG2YiZvO530
+
+###create a role
+GET  http://localhost:5000/customer-support/roles/getAll
+Content-Type: application/json
+
+{
+  "name": "manager"
+}
+###create permission
+POST http://localhost:5000/customer-support/permissions/create
+Content-Type: application/json
+
+{
+  "name": "read",
+  "description": "Permission to see all users"
+}
+### add permission to role
+POST http://localhost:5000/customer-support/roles/4/permissions/1
+
+###
+POST  http://localhost:5000/customer-support/ticketItems/create
+Content-Type: application/json
+
+{
+"type": "wSDBXcv",
+"name": "pvcxassvwxv xcwordvwxcv123",
+"ref": "rdsfhxbfc"
+}
+###
+POST  http://localhost:5000/customer-support/chatbot/
+Content-Type: application/json
+
+{
+"prompt":"qdmlfjmdl"
+}

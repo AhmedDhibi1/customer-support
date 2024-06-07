@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+}
+
+/* Adjust sidebar width and set it to fixed */
+nav {
+  width: 250px; /* Adjust as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #1e3a8a, #54a0ff);
+  color: white;
+  overflow-y: auto;
+}
+
+/* Adjust content area to fill remaining space */
+main {
+  flex: 1;
+  margin-left: 250px; /* Adjust according to sidebar width */
+  padding: 20px; /* Adjust as needed */
+}
